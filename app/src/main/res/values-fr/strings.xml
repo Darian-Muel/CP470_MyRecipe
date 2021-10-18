@@ -16,7 +16,6 @@ appuyez sur créer et il ajoutera la recette aux balises correspondantes que vou
 la catégorie correspondante pour voir toutes les recettes répertoriées dans cette catégorie</string>
 
     <string name="Title">Titre</string>
-    <string name="Title2">Title2</string>
     <string name="Description">la description</string>
     <string name="UploadPhoto">Envoyer la photo</string>
     <string name="AddToFavourites">Ajouter aux Favoris</string>
