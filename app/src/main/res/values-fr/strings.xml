@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyRecipe</string>
+    <string name="ViewRecipes">Voir les recettes</string>
+    <string name="Help">Aider</string>
+    <string name="CreateRecipes">Créer des recettes</string>
+    <string name="Favourites">Favoris</string>
+    <string name="Breakfast">Petit Déjeuner</string>
+    <string name="Lunch">Déjeuner</string>
+    <string name="Dinner">Dîner</string>
+    <string name="Other">Autre</string>
+    <string name="Instructions">Instructions : MyRecipe vous permet de créer et d\'enregistrer des recettes uniques et de les trier en différentes catégories pour un accès facile.
+Pour créer une nouvelle recette, accédez à la page d\'ajout de recette à l\'aide de la barre d\'outils ou des boutons de navigation/retour
+Remplissez les informations correspondantes pour votre recette, y compris la description, la liste des ingrédients, la photo et les catégories pertinentes comme le dîner/le déjeuner/autre
+appuyez sur créer et il ajoutera la recette aux balises correspondantes que vous avez sélectionnées. Vous pouvez afficher ces recettes en accédant à la page d\'affichage des recettes et en sélectionnant
+la catégorie correspondante pour voir toutes les recettes répertoriées dans cette catégorie</string>
+
+    <string name="Title">Titre</string>
+    <string name="Title2">Title2</string>
+    <string name="Description">la description</string>
+    <string name="UploadPhoto">Envoyer la photo</string>
+    <string name="AddToFavourites">Ajouter aux Favoris</string>
+    <string name="AddToBreakfast">Ajouter au petit-déjeuner</string>
+    <string name="AddToLunch">Ajouter au déjeuner</string>
+    <string name="AddToDiner">Ajouter au dîner</string>
+    <string name="AddtoOther">Ajouter à autre</string>
+    <string name="AddtoIngredients">Ajouter des ingrédients</string>
+    <string name="Create">créer</string>
+    <string name="AddRecipe">Ajouter une recette</string>
+
+
+</resources>
