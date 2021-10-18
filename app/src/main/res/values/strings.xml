@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyRecipe</string>
+    <string name="ViewRecipes">View Recipes</string>
+    <string name="Help">Help</string>
+    <string name="CreateRecipes">Create Recipes</string>
+</resources>
