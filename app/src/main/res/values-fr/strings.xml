@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyRecipe</string>
+    <string name="ViewRecipes">Voir les recettes</string>
+    <string name="Help">Aider</string>
+    <string name="CreateRecipes">Créer des recettes</string>
+</resources>
