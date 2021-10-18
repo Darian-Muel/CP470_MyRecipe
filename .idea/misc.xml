@@ -3,11 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Owner/AndroidStudioProjects/MyRecipe/app/src/main/res/layout/activity_main.xml" value="0.176" />
-<<<<<<< HEAD
-        <entry key="..\:/android/CP472_Group_Project-master/CP472_Group_Project-master/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-=======
->>>>>>> f95943bae9ad34dd188097497b66f7be1c8e98b0
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MyRecipe/app/src/main/res/layout/activity_add_recipes.xml" value="0.264" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MyRecipe/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MyRecipe/app/src/main/res/layout/help_page.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/MyRecipe/app/src/main/res/layout/type_select_page.xml" value="0.264" />
       </map>
     </option>
   </component>

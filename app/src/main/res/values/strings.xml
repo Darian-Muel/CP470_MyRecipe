@@ -3,4 +3,26 @@
     <string name="ViewRecipes">View Recipes</string>
     <string name="Help">Help</string>
     <string name="CreateRecipes">Create Recipes</string>
+    <string name="Favourites">Favourites</string>
+    <string name="Breakfast">Breakfast</string>
+    <string name="Lunch">Lunch</string>
+    <string name="Dinner">Dinner</string>
+    <string name="Other">Other</string>
+    <string name="Instructions">Instructions: MyRecipe allows you to create and save unique recipes and sort them into different categories for easy access.
+To Create a new recipe navigate to the add recipe page using either the toolbar or the navigation/back buttons
+Fill out the corresponding info for your recipe including the description, ingredients list, photo, and relevant categories like dinner/lunch/other
+press create and it will add the recipe to the corresponding tags you selected. You can view these recipes by navigating to the view recipes page and selecting
+the corresponding category to view all the recipes listed under that category</string>
+
+    <string name="Title">Title</string>
+    <string name="Description">Description</string>
+    <string name="UploadPhoto">Upload Photo</string>
+    <string name="AddToFavourites">Add to Favourites</string>
+    <string name="AddToBreakfast">Add to Breakfast</string>
+    <string name="AddToLunch">Add to Lunch</string>
+    <string name="AddToDiner">Add to Dinner</string>
+    <string name="AddtoOther">Add to Other</string>
+    <string name="AddtoIngredients">Add Ingredients</string>
+    <string name="Create">Create</string>
+    <string name="AddRecipe">Add Recipe</string>
 </resources>
