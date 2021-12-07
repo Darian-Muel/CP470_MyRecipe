@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class FavouritesActivity extends AppCompatActivity {
-
+    private Button btnDelete;
 
     RecyclerView recyclerView;
     int n = RecipeLists.favList.size();
@@ -23,6 +26,15 @@ public class FavouritesActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
+        btnDelete = findViewById(R.id.btn_delete);
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 
         for (int i = 0; i < RecipeLists.favList.size();i++){
             Recipe recipe = RecipeLists.favList.get(i);
@@ -38,4 +50,4 @@ public class FavouritesActivity extends AppCompatActivity {
 
 
     }
-}
+} 
