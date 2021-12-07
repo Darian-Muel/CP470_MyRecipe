@@ -28,12 +28,6 @@ public class FavouritesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favourites);
         btnDelete = findViewById(R.id.btn_delete);
 
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
 
         for (int i = 0; i < RecipeLists.favList.size();i++){
