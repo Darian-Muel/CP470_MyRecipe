@@ -4,8 +4,6 @@ public class Recipe {
     private String title;
     private String description;
     private String ingredients;
-    private int photo;
-
 
     //recipe object creator
     public Recipe(String title, String description, String ingredients){
@@ -15,11 +13,11 @@ public class Recipe {
     }
 
     public String getTitle() {
-        return title;
+        return this.title.toString();
     }
 
     public String getDescription() {
-        return description;
+        return this.description.toString();
     }
 
     public String getIngredients() {

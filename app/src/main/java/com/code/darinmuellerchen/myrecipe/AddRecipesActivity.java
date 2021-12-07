@@ -60,7 +60,7 @@ public class AddRecipesActivity extends AppCompatActivity {
                 if (cbOther.isChecked()){
                     RecipeLists.otherList.add(recipe);
                 }
-                Toast toast = Toast.makeText(getApplicationContext(),title + " Created", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(),title + " created", Toast.LENGTH_LONG);
                 toast.show();
 
             }
