@@ -25,4 +25,24 @@ the corresponding category to view all the recipes listed under that category</s
     <string name="AddtoIngredients">Add Ingredients</string>
     <string name="Create">Create</string>
     <string name="AddRecipe">Add Recipe</string>
+
+
+    <string-array name="programming_languages">
+        <item>turkey</item>
+        <item>turkey1</item>
+        <item>turkey2</item>
+        <item>turkey3</item>
+        <item>turkey4</item>
+        <item>turkey5</item>
+        <item>turkey6</item>
+    </string-array>
+    <string-array name="description">
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+        <item>"descrippy</item>
+    </string-array>
 </resources>

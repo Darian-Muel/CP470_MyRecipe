@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRecipe">
         <activity
+            android:name=".FavouritesActivity"
+            android:exported="true"
+            android:parentActivityName=".ViewRecipesActivity" />
+        <activity
             android:name=".AddRecipesActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".HelpActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
