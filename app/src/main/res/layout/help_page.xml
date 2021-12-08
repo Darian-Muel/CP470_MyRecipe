@@ -58,8 +58,9 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="305dp"
-            android:layout_height="343dp"
+            android:id="@+id/constraintLayout3"
+            android:layout_width="281dp"
+            android:layout_height="291dp"
             android:background="#A5A5A5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +68,8 @@
 
             <TextView
                 android:id="@+id/txtInstructions"
-                android:layout_width="276dp"
-                android:layout_height="311dp"
+                android:layout_width="260dp"
+                android:layout_height="263dp"
                 android:fadeScrollbars="false"
                 android:scrollbars="vertical"
                 android:text="@string/Instructions"
@@ -84,7 +85,7 @@
 
         <TextView
             android:id="@+id/txtHelp"
-            android:layout_width="108dp"
+            android:layout_width="161dp"
             android:layout_height="48dp"
             android:layout_marginTop="4dp"
             android:text="@string/Help"
@@ -95,5 +96,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/Help" />
+
+        <Button
+            android:id="@+id/btnShowHelp"
+            android:layout_width="122dp"
+            android:layout_height="54dp"
+            android:backgroundTint="#04199F"
+            android:text="@string/Help"
+            app:iconTint="#EA2626"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        <Button
+            android:id="@+id/btnShowVersionNum"
+            android:layout_width="122dp"
+            android:layout_height="54dp"
+            android:backgroundTint="#04199F"
+            android:text="@string/Version"
+            app:iconTint="#EA2626"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+        <Button
+            android:id="@+id/btnShowAuthors"
+            android:layout_width="122dp"
+            android:layout_height="54dp"
+            android:backgroundTint="#04199F"
+            android:text="@string/Authors"
+            app:iconTint="#EA2626"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnShowVersionNum"
+            app:layout_constraintStart_toEndOf="@+id/btnShowHelp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

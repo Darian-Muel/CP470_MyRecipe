@@ -13,6 +13,14 @@ To Create a new recipe navigate to the add recipe page using either the toolbar 
 Fill out the corresponding info for your recipe including the description, ingredients list, photo, and relevant categories like dinner/lunch/other
 press create and it will add the recipe to the corresponding tags you selected. You can view these recipes by navigating to the view recipes page and selecting
 the corresponding category to view all the recipes listed under that category</string>
+    <string name="Authors">Authors</string>
+    <string name="Version">Version</string>
+
+    <string name="AuthorDisplay">Authors: Darian Muellerchen, Issac Abdi, Edmund Ru, Jordan Bergen, Sean Kirschner</string>
+
+    <string name="VersionDisplay">Version = "1.0"</string>
+
+
 
     <string name="Title">Title</string>
     <string name="Description">Description</string>

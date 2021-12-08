@@ -14,6 +14,12 @@ Pour créer une nouvelle recette, accédez à la page d\'ajout de recette à l\'
 Remplissez les informations correspondantes pour votre recette, y compris la description, la liste des ingrédients, la photo et les catégories pertinentes comme le dîner/le déjeuner/autre
 appuyez sur créer et il ajoutera la recette aux balises correspondantes que vous avez sélectionnées. Vous pouvez afficher ces recettes en accédant à la page d\'affichage des recettes et en sélectionnant
 la catégorie correspondante pour voir toutes les recettes répertoriées dans cette catégorie</string>
+    <string name="Authors">Auteurs</string>
+    <string name="Version">Version</string>
+    <string name="AuthorDisplay">Auteurs: Darian Muellerchen, Issac Abdi, Edmund Ru, Jordan Bergen, Sean Kirschner</string>
+    <string name="VersionDisplay">Version = "1.0"</string>
+
+
 
     <string name="Title">Titre</string>
     <string name="Description">la description</string>
