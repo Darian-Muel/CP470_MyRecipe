@@ -67,7 +67,8 @@ public class FavouritesActivity extends AppCompatActivity {
             @Override
             public void onDeleteClick(int position) {
                 RecipeLists.favList.remove(position);
-                myAdapter.notifyItemRemoved(position);
+                Intent intent = new Intent(FavouritesActivity.this, FavouritesActivity.class);
+                startActivity(intent);
             }
         };
     }

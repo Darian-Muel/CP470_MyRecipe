@@ -51,9 +51,12 @@
 
             <Button
                 android:id="@+id/btn_delete"
-                android:layout_width="65dp"
-                android:layout_height="58dp"
-                android:text="Delete"
+                android:layout_width="69dp"
+                android:layout_height="49dp"
+                android:backgroundTint="@color/red"
+                android:text=" "
+                android:textSize="8sp"
+                app:icon="@android:drawable/ic_delete"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
