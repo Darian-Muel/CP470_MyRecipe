@@ -9,9 +9,6 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 public class FavouritesActivity extends AppCompatActivity {
     private Button btnDelete;
@@ -22,6 +19,7 @@ public class FavouritesActivity extends AppCompatActivity {
     String[] s2 = new String[n];
     Bitmap[] images = new Bitmap[n];
     private MyAdapter.RecyclerViewCLickListener listener;
+    private MyAdapter myAdapter;
 
 
     @Override
@@ -46,14 +44,16 @@ public class FavouritesActivity extends AppCompatActivity {
     }
 
     private void setAdapter() {
-        setOnClickListener();
+
+        FavouritesOnClickListener();
         recyclerView = findViewById(R.id.recyclerViewFavourites);
-        MyAdapter myAdapter = new MyAdapter( this, s1, s2, images, listener);
+        myAdapter = new MyAdapter( this, s1, s2, images, listener);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
-    private void setOnClickListener() {
+    private void FavouritesOnClickListener() {
         listener = new MyAdapter.RecyclerViewCLickListener() {
             @Override
             public void onClick(View v, int position) {
@@ -62,6 +62,12 @@ public class FavouritesActivity extends AppCompatActivity {
                 intent.putExtra("Description", RecipeLists.favList.get(position).getDescription());
                 intent.putExtra("Picture", RecipeLists.favList.get(position).getImageBitmap());
                 startActivity(intent);
+            }
+
+            @Override
+            public void onDeleteClick(int position) {
+                RecipeLists.favList.remove(position);
+                myAdapter.notifyItemRemoved(position);
             }
         };
     }
