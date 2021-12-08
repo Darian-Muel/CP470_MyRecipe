@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
-    String data1[], data2[];
+    String data1[];
     Bitmap images[];
     Context context;
 
@@ -26,10 +26,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     private RecyclerViewCLickListener listener;
 
 
-    public MyAdapter(Context ct, String s1[], String s2[], Bitmap img[], RecyclerViewCLickListener listener){
+    public MyAdapter(Context ct, String s1[], Bitmap img[], RecyclerViewCLickListener listener){
         context = ct;
         data1 = s1;
-        data2 = s2;
         images = img;
         this.listener = listener;
     }
@@ -47,21 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
 
         holder.myText1.setText(data1[position]);
-        holder.myText2.setText(data2[position]);
         holder.myImage.setImageBitmap(images[position]);
-        //holder.myImage.setImageResource(images[position]);
-
-        /*holder.mainLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(context, PopupActivity.class);
-                intent.putExtra("data1",data1[holder.getAdapterPosition()]);
-                intent.putExtra("data2",data2[holder.getAdapterPosition()]);
-                intent.putExtra("myImage",images[holder.getAdapterPosition()]);
-                context.startActivity(intent);
-            }
-        });*/
 
 
     }

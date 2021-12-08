@@ -49,7 +49,7 @@ public class FavouritesActivity extends AppCompatActivity {
 
         FavouritesOnClickListener();
         recyclerView = findViewById(R.id.recyclerViewFavourites);
-        myAdapter = new MyAdapter( this, s1, s2, images, listener);
+        myAdapter = new MyAdapter( this, s1, images, listener);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
