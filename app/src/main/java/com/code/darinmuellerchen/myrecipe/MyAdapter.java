@@ -22,11 +22,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     Bitmap images[];
     Context context;
 
-    public MyAdapter(Context ct, String s1[], String s2[], Bitmap img[]){
+    private RecyclerViewCLickListener listener;
+
+
+    public MyAdapter(Context ct, String s1[], String s2[], Bitmap img[], RecyclerViewCLickListener listener){
         context = ct;
         data1 = s1;
         data2 = s2;
         images = img;
+        this.listener = listener;
     }
 
     @NonNull
@@ -68,7 +72,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     }
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView myText1, myText2;
         ImageView myImage;
@@ -80,6 +84,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
             myText2 = itemView.findViewById(R.id.food_description);
             myImage = itemView.findViewById(R.id.food_picture);
             mainLayout = itemView.findViewById(R.id.mainLayout);
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            listener.onClick(view,getAbsoluteAdapterPosition());
+        }
+    }
+
+    public interface RecyclerViewCLickListener{
+        void onClick(View v, int position);
     }
 }

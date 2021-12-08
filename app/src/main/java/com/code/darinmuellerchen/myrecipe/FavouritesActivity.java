@@ -21,6 +21,8 @@ public class FavouritesActivity extends AppCompatActivity {
     String[] s1 = new String[n];
     String[] s2 = new String[n];
     Bitmap[] images = new Bitmap[n];
+    private MyAdapter.RecyclerViewCLickListener listener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,29 @@ public class FavouritesActivity extends AppCompatActivity {
 
             //images[i] = R.drawable.turkey_food;
         }
-        recyclerView = findViewById(R.id.recyclerViewFavourites);
 
-        MyAdapter myAdapter = new MyAdapter( this, s1, s2, images);
+        setAdapter();
+
+    }
+
+    private void setAdapter() {
+        setOnClickListener();
+        recyclerView = findViewById(R.id.recyclerViewFavourites);
+        MyAdapter myAdapter = new MyAdapter( this, s1, s2, images, listener);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
 
-
+    private void setOnClickListener() {
+        listener = new MyAdapter.RecyclerViewCLickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
+                intent.putExtra("Title", RecipeLists.favList.get(position).getTitle());
+                //intent.putExtra("Description", RecipeLists.favList.get(position).getDescription());
+                //intent.putExtra("Picture", RecipeLists.favList.get(position).getImageBitmap());
+                startActivity(intent);
+            }
+        };
     }
 } 

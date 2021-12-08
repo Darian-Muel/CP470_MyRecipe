@@ -16,7 +16,7 @@ public class PopupActivity extends AppCompatActivity {
     ImageView food_picture;
     TextView food_title, food_description;
 
-    String data1, data2;
+    String title, description;
     int myImage;
 
     @Override
@@ -28,23 +28,15 @@ public class PopupActivity extends AppCompatActivity {
         food_title = findViewById(R.id.food_title);
         food_description = findViewById(R.id.food_description);
 
-        getData();
-        setData();
-
-    }
-
-    private void getData(){
-        if(getIntent().hasExtra("myImage") && getIntent().hasExtra("data1") && getIntent().hasExtra("data2")){
-            data1 = getIntent().getStringExtra("data1");
-            data2 = getIntent().getStringExtra("data2");
-            myImage = getIntent().getIntExtra("myImage", 1);
-        }else{
-            Toast.makeText(this,"No Data. ", Toast.LENGTH_SHORT).show();
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            title = extras.getString("Title");
         }
+        food_title.setText(title);
+
+
+
     }
-    private void setData(){
-        food_title.setText(data1);
-        food_description.setText(data2);
-        food_picture.setImageResource((myImage));
-    }
+
+
 }
