@@ -14,6 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRecipe">
         <activity
+            android:name=".OtherActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DinnerActivity"
+            android:exported="true"
+            android:parentActivityName=".ViewRecipesActivity" />
+        <activity
             android:name=".LunchActivity"
             android:exported="true"
             android:parentActivityName=".ViewRecipesActivity" />

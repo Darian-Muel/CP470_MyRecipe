@@ -45,5 +45,19 @@ public class ViewRecipesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnDinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewRecipesActivity.this, DinnerActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnOther.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewRecipesActivity.this, OtherActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

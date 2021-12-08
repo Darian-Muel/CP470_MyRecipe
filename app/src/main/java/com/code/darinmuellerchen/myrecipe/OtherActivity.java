@@ -10,12 +10,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LunchActivity extends AppCompatActivity {
+public class OtherActivity extends AppCompatActivity {
+
 
     private Button btnDelete;
 
     RecyclerView recyclerView;
-    int n = RecipeLists.lunchList.size();
+    int n = RecipeLists.otherList.size();
     String[] s1 = new String[n];
     String[] s2 = new String[n];
     String[] s3 = new String[n];
@@ -28,11 +29,11 @@ public class LunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lunch);
+        setContentView(R.layout.activity_other);
 
 
-        for (int i = 0; i < RecipeLists.lunchList.size();i++){
-            Recipe recipe = RecipeLists.lunchList.get(i);
+        for (int i = 0; i < RecipeLists.otherList.size();i++){
+            Recipe recipe = RecipeLists.otherList.get(i);
             s1[i] = recipe.getTitle();
             s2[i] = recipe.getDescription();
             s3[i] = recipe.getIngredients();
@@ -61,17 +62,17 @@ public class LunchActivity extends AppCompatActivity {
             @Override
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
-                intent.putExtra("Title", RecipeLists.lunchList.get(position).getTitle());
-                intent.putExtra("Description", RecipeLists.lunchList.get(position).getDescription());
-                intent.putExtra("Picture", RecipeLists.lunchList.get(position).getImageBitmap());
-                intent.putExtra("Ingredients", RecipeLists.lunchList.get(position).getIngredients());
+                intent.putExtra("Title", RecipeLists.otherList.get(position).getTitle());
+                intent.putExtra("Description", RecipeLists.otherList.get(position).getDescription());
+                intent.putExtra("Picture", RecipeLists.otherList.get(position).getImageBitmap());
+                intent.putExtra("Ingredients", RecipeLists.otherList.get(position).getIngredients());
                 startActivity(intent);
             }
 
             @Override
             public void onDeleteClick(int position) {
-                RecipeLists.lunchList.remove(position);
-                Intent intent = new Intent(LunchActivity.this, LunchActivity.class);
+                RecipeLists.otherList.remove(position);
+                Intent intent = new Intent(OtherActivity.this, OtherActivity.class);
                 startActivity(intent);
             }
         };
