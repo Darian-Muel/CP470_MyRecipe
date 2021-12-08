@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,22 +20,23 @@ public class FavouritesActivity extends AppCompatActivity {
     int n = RecipeLists.favList.size();
     String[] s1 = new String[n];
     String[] s2 = new String[n];
-    int[] images = new int[n];
+    Bitmap[] images = new Bitmap[n];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
-        btnDelete = findViewById(R.id.btn_delete);
-
 
 
         for (int i = 0; i < RecipeLists.favList.size();i++){
             Recipe recipe = RecipeLists.favList.get(i);
             s1[i] = recipe.getTitle();
             s2[i] = recipe.getDescription();
-            images[i] = R.drawable.turkey_food;
+            images[i] = recipe.getImageBitmap();
+
+
+            //images[i] = R.drawable.turkey_food;
         }
         recyclerView = findViewById(R.id.recyclerViewFavourites);
 

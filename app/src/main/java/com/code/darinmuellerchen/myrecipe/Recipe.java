@@ -1,15 +1,19 @@
 package com.code.darinmuellerchen.myrecipe;
 
+import android.graphics.Bitmap;
+
 public class Recipe {
     private String title;
     private String description;
     private String ingredients;
+    private Bitmap imageBitmap;
 
     //recipe object creator
-    public Recipe(String title, String description, String ingredients){
+    public Recipe(String title, String description, String ingredients, Bitmap imageBitmap){
         this.title = title;
         this.description = description;
         this.ingredients = ingredients;
+        this.imageBitmap = imageBitmap;
     }
 
     public String getTitle() {
@@ -22,5 +26,9 @@ public class Recipe {
 
     public String getIngredients() {
         return ingredients;
+    }
+
+    public Bitmap getImageBitmap() {
+        return imageBitmap;
     }
 }
