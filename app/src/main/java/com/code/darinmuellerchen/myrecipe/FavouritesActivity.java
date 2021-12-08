@@ -17,6 +17,7 @@ public class FavouritesActivity extends AppCompatActivity {
     int n = RecipeLists.favList.size();
     String[] s1 = new String[n];
     String[] s2 = new String[n];
+    String[] s3 = new String[n];
     Bitmap[] images = new Bitmap[n];
     private MyAdapter.RecyclerViewCLickListener listener;
     private MyAdapter myAdapter;
@@ -33,6 +34,7 @@ public class FavouritesActivity extends AppCompatActivity {
             Recipe recipe = RecipeLists.favList.get(i);
             s1[i] = recipe.getTitle();
             s2[i] = recipe.getDescription();
+            s3[i] = recipe.getIngredients();
             images[i] = recipe.getImageBitmap();
 
 
@@ -61,6 +63,7 @@ public class FavouritesActivity extends AppCompatActivity {
                 intent.putExtra("Title", RecipeLists.favList.get(position).getTitle());
                 intent.putExtra("Description", RecipeLists.favList.get(position).getDescription());
                 intent.putExtra("Picture", RecipeLists.favList.get(position).getImageBitmap());
+                intent.putExtra("Ingredients", RecipeLists.favList.get(position).getIngredients());
                 startActivity(intent);
             }
 
