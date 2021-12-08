@@ -59,8 +59,8 @@ public class FavouritesActivity extends AppCompatActivity {
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
                 intent.putExtra("Title", RecipeLists.favList.get(position).getTitle());
-                //intent.putExtra("Description", RecipeLists.favList.get(position).getDescription());
-                //intent.putExtra("Picture", RecipeLists.favList.get(position).getImageBitmap());
+                intent.putExtra("Description", RecipeLists.favList.get(position).getDescription());
+                intent.putExtra("Picture", RecipeLists.favList.get(position).getImageBitmap());
                 startActivity(intent);
             }
         };

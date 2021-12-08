@@ -2,6 +2,7 @@ package com.code.darinmuellerchen.myrecipe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +18,7 @@ public class PopupActivity extends AppCompatActivity {
     TextView food_title, food_description;
 
     String title, description;
-    int myImage;
+    Bitmap myImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,14 @@ public class PopupActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             title = extras.getString("Title");
+            description = extras.getString("Description");
+            myImage = extras.getParcelable("Picture");
+
         }
         food_title.setText(title);
+        food_description.setText(description);
+        food_picture.setImageBitmap(myImage);
+
 
 
 
