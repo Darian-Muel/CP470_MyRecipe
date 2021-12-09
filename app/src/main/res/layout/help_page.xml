@@ -7,16 +7,17 @@
     android:background="#000000">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
         android:layout_width="411dp"
-        android:layout_height="86dp"
-        android:background="#8E8D8D"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:menu="@menu/menu" />
 
     <TextView
         android:id="@+id/txtTitle3"
@@ -52,7 +53,7 @@
         android:layout_width="374dp"
         android:layout_height="427dp"
         android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar3"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent">
