@@ -32,6 +32,8 @@ the corresponding category to view all the recipes listed under that category</s
     <string name="AddtoIngredients">Add Ingredients</string>
     <string name="Create">Create</string>
     <string name="AddRecipe">Add Recipe</string>
+    <string name="ContinueWithoutSignIn">Continue Without Signing In</string>
+    <string name="SignOut">Sign Out</string>
 
 
     <string-array name="programming_languages">
