@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -15,7 +17,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class AddRecipesActivity extends AppCompatActivity {
     private Button createReciepe;
@@ -30,6 +38,10 @@ public class AddRecipesActivity extends AppCompatActivity {
     private ImageButton btnTakePic;
     private Bitmap imageBitmap;
 
+
+    private ArrayList<Recipe> favourites;
+    private SharedPreferences prefs;
+    private SharedPreferences.Editor edit;
 
     protected static final String ACTIVITY_NAME = "AddRecipesActivity";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -50,6 +62,14 @@ public class AddRecipesActivity extends AppCompatActivity {
         cbOther = findViewById(R.id.checkBoxOther);
         btnTakePic = findViewById(R.id.imgBtnTakePic);
 
+        prefs = getSharedPreferences("SharedPrefs", Context.MODE_PRIVATE);
+        edit = prefs.edit();
+
+        prefs = getSharedPreferences("SharedPrefs", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = prefs.getString("Favourites", "");
+        Type type = new TypeToken<List<Recipe>>(){}.getType();
+        favourites = gson.fromJson(json, type);
 
         final Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
@@ -69,7 +89,11 @@ public class AddRecipesActivity extends AppCompatActivity {
                 //new Recipe(title,description,ingredients,fav,breakfast,lunch,dinner,other);
                 Recipe recipe = new Recipe(title,description,ingredients, imageBitmap);
                 if (cbFav.isChecked()) {
-                    RecipeLists.favList.add(recipe);
+                    favourites.add(recipe);
+                    Gson gson = new Gson();
+                    String json = gson.toJson(favourites);
+                    edit.putString("Favourites", json);
+                    edit.commit();
                 }
                 if (cbBreakfast.isChecked()){
                     RecipeLists.breakfastList.add(recipe);

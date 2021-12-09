@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -35,13 +36,17 @@ public class PopupActivity extends AppCompatActivity {
             title = extras.getString("Title");
             description = extras.getString("Description");
             ingredients = extras.getString("Ingredients");
-            myImage = extras.getParcelable("Picture");
+
+            //myImage = extras.getParcelable("Picture");
+
 
 
         }
         food_title.setText(title);
         food_description.setText(description);
-        food_picture.setImageBitmap(myImage);
+        /*if (myImage != null) {
+            food_picture.setImageBitmap(myImage);
+        }*/
         food_ingredients.setText(ingredients);
 
 
