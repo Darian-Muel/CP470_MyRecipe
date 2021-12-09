@@ -32,4 +32,6 @@ la catégorie correspondante pour voir toutes les recettes répertoriées dans c
     <string name="AddtoIngredients">Ajouter des ingrédients</string>
     <string name="Create">créer</string>
     <string name="AddRecipe">Ajouter une recette</string>
+    <string name="ContinueWithoutSignIn">Continuer sans se connecter</string>
+    <string name="SignOut">Se déconnecter</string>
 </resources>
