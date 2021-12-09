@@ -1,5 +1,6 @@
 package com.code.darinmuellerchen.myrecipe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -9,12 +10,15 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 public class AddRecipesActivity extends AppCompatActivity {
@@ -29,6 +33,7 @@ public class AddRecipesActivity extends AppCompatActivity {
     private CheckBox cbOther;
     private ImageButton btnTakePic;
     private Bitmap imageBitmap;
+    BottomNavigationView bottomNavigationView;
 
 
     protected static final String ACTIVITY_NAME = "AddRecipesActivity";
@@ -50,6 +55,27 @@ public class AddRecipesActivity extends AppCompatActivity {
         cbOther = findViewById(R.id.checkBoxOther);
         btnTakePic = findViewById(R.id.imgBtnTakePic);
 
+        bottomNavigationView = findViewById(R.id.bottom_navigator);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.create_navbar:
+                        startActivity(new Intent(getApplicationContext(), AddRecipesActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home_navbar:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.help_navbar:
+                        startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                        overridePendingTransition(0,0);
+                }
+                return false;
+            }
+        });
 
         final Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
