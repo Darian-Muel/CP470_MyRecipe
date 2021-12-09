@@ -1,5 +1,6 @@
 package com.code.darinmuellerchen.myrecipe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,12 +8,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BreakfastActivity extends AppCompatActivity {
 
     private Button btnDelete;
+    BottomNavigationView bottomNavigationView;
 
     RecyclerView recyclerView;
     int n = RecipeLists.breakfastList.size();
@@ -30,6 +35,27 @@ public class BreakfastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
 
+        bottomNavigationView = findViewById(R.id.bottom_navigator);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.create_navbar:
+                        startActivity(new Intent(getApplicationContext(), AddRecipesActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home_navbar:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.help_navbar:
+                        startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                        overridePendingTransition(0,0);
+                }
+                return false;
+            }
+        });
 
         for (int i = 0; i < RecipeLists.breakfastList.size();i++){
             Recipe recipe = RecipeLists.breakfastList.get(i);
